@@ -1,6 +1,28 @@
-* {
-    font-family: Verdana Verdana, Geneva, Tahoma, sans-serif;
-}
 body {
     background-color: #020659;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav {
+    background-color: #020873;
+}
+nav li { 
+    display: inline-block;
+}
+a {
+    display: block; 
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+}
+h1 {
+    font-size: 1.23em;
+    color: white;
+}
+h2 {
+    font-size: 1em;
+    color: #590242
+}
+h3 {
+    font-size: 1em;
 }
