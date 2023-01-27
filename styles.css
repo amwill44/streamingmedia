@@ -3,7 +3,7 @@
 }
 body{
     background: #070659;
-    color: white;
+    color: #590242;
     max-width: 834px;
     width: 85%;
     display: grid;
@@ -13,19 +13,40 @@ header{
     background: #020873;
     text-transform: uppercase; 
 }
-nav li {
-    display: inline-block;
-    margin: 0;
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
-
-li, a {
+nav li, a {
     color: white;
     text-decoration: none;
     font-size: 1em;
     text-align: center;
+    list-style-type: none;
+}
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.item2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.item3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.item4{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+.item5{
+    grid-column-start: 5;
+    grid-column-end: 6;
 }
 .firstheader{
     text-transform: capitalize;
+    text-align: center;
 }
 main {
     background: white;
@@ -33,7 +54,8 @@ main {
 }
 article {
     background-image: linear-gradient(to right, #030ABC, black);
-    padding: 8px 15px;
+    color: white;
+    padding: 5px 15px;
     margin: 0px auto;
 }
 #trending {
@@ -41,9 +63,11 @@ article {
 }
 .your {
     background: #0D8DFB;
+    color: white;
 }
 .curated {
     background: #020873;
+    color:white;
 }
 footer{
     background: white;
@@ -57,5 +81,5 @@ footer{
 
 }
 @media screen and (min-width:451px) {
-
+   
 }
