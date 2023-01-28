@@ -6,16 +6,17 @@ body{
     color: #590242;
     max-width: 834px;
     width: 85%;
-    display: grid;
     margin: 0px auto;
 }
 header{
     background: #020873;
     text-transform: uppercase; 
+    padding: 10px;
 }
-.wrapper {
+nav ul {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+
 }
 nav li, a {
     color: white;
@@ -23,30 +24,12 @@ nav li, a {
     font-size: 1em;
     text-align: center;
     list-style-type: none;
-}
-.item1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-.item2 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-.item3{
-    grid-column-start: 3;
-    grid-column-end: 4;
-}
-.item4{
-    grid-column-start: 4;
-    grid-column-end: 5;
-}
-.item5{
-    grid-column-start: 5;
-    grid-column-end: 6;
+    
 }
 .firstheader{
     text-transform: capitalize;
-    text-align: center;
+    font-variant: small-caps;
+    font-weight: bold;
 }
 main {
     background: white;
@@ -61,13 +44,70 @@ article {
 #trending {
     background: white;
 }
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+.scroll dl{
+    position: absolute;
+    top: 251px;
+    background-color: #d3d3d3;
+    padding: 5px;
+    height: 50px;
+    width: 301px;
+}
+dl{
+    display: flex;
+}
+dt {
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 1em;
+}
+dd {
+    font-size: 1em;
+}
+audio{
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+.playlists{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+#yourplaylists {
+    display: ;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
 .your {
     background: #0D8DFB;
     color: white;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+ #curatedplaylists {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}  
 .curated {
     background: #020873;
     color:white;
+     display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 footer{
     background: white;
@@ -77,9 +117,105 @@ footer{
     text-align: center;
     font-size: .75em;
 }
-@media screen and (max-width 450px) {
+
+audio::-webkit-media-controls-mute-button {
 
 }
-@media screen and (min-width:451px) {
-   
+audio::-webkit-media-controls-play-button {
+
 }
+audio::-webkit-media-controls-enclosure {
+
+
+
+#trending ::-webkit-scrollbar {
+
+}
+#trending ::-webkit-scrollbar-track {
+
+}
+#trending ::-webkit-scrollbar-thumb {
+
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+
+}
+.your ::-webkit-scrollbar, .curated ::-webkit-scrollbar {
+
+}
+.your ::-webkit-scrollbar-track, .curated ::-webkit-scrollbar-track  {
+
+}
+.your ::-webkit-scrollbar-thumb, .curated ::-webkit-scrollbar-thumb {
+
+}
+.your ::-webkit-scrollbar-thumb:hover, .curated ::-webkit-scrollbar-thumb:hover {
+
+}
+
+
+@media screen and (max-width 400px) {
+
+    .scroll div{
+        positon: absolute;
+        top: 251px;
+        background-color: #d3d3d3;
+        padding: 5px;
+        height: 50px;
+        width: 350px;
+
+    ul {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    label span {
+        background-color: #ffffff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+    }
+    label span:before, label span:after {
+        background: #ffffff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    label span:before {
+        top: 5px;
+    }
+    label span:after {
+        top: -5px;
+    }
+    input {
+        display: none;
+    }
+    input:checked ~ ul {
+        max-height: 500px;
+    }
+    input:checked ~ label span {
+        background: transparent;
+    }
+    input:checked ~ label span:before {
+        transform: rotate(-45deg);
+    }
+    input:checked ~ label span:after {
+        transform: rotate(45deg);
+    }
+    input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+        top: 0;
+    }
+    
+    }
