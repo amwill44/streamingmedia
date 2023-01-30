@@ -166,7 +166,6 @@ h3{
     text-align: center;
 }
 p{
-    text-align: center;
     font-size: 1em;
     padding-bottom: 10px;
 }
@@ -266,6 +265,9 @@ dd {
     background: #020659;
     margin: 0px 10px;
   }
+  .playlists p{
+    text-align: center;
+  }
 footer{
     background: white;
     color: #590242;
@@ -306,7 +308,7 @@ audio::-webkit-media-controls-enclosure {
     box-shadow: inset 0 0 5px rgba(3,10,188,.5); 
 }
 #yourplaylists ::-webkit-scrollbar-thumb {
-    background: #020873; 
+    background: #020659; 
     border-radius: 5px;
 }
 
@@ -323,14 +325,17 @@ audio::-webkit-media-controls-enclosure {
 @media screen and (min-width:650px) {
     ul {
         overflow: visible;
-        top: 0;
-        position: absolute;
-        left: 20%;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
     label span, input {
         display: none;
+    }
+    body{
+        min-width: 834px;
     }
     .firstheader{
         text-transform: capitalize;
@@ -341,5 +346,52 @@ audio::-webkit-media-controls-enclosure {
     }
     li {
         margin: 0px auto; 
+        display: inline-block;
     }
+    header{
+        padding-bottom: 50px;
+    }
+    .playlists{
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        min-width: 834px;
+      }
+    #yourplaylists {
+        grid-column: 1 / span 1;
+        min-width: 417px;
+        padding-top: 45px;
+      }
+    #curatedplaylists {
+       grid-column: 2 / span 1;
+        min-width: 417px;
+  }
+  .your {
+    display: list-item;
+    list-style-type: none;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .curated {
+    display: list-item;
+    list-style-type: none;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .button1, .button2, .button3 {
+    float: right;
+  }
+  .your .yourbackground {
+    background: #2699FB;
+    margin: 10px 0;
+  }
+  .curated .curatedbackground {
+    background: #020659;
+    margin: 10px 0;
+  }
+  .playlists img {
+    padding-left: 115px;
+  }
+  /* i couldn't get the image and text to be side by side and because everything else is done and its already past due i'm going to turn it in. if you could leave a note on how to do it for later that would be awesome! it also said my webkits have a parse error which i don't know what that is so can you tell me what that means as well! */
 }
