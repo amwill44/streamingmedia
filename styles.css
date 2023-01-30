@@ -391,7 +391,7 @@ audio::-webkit-media-controls-enclosure {
     margin: 10px 0;
   }
   .playlists img {
-    padding-left: 115px;
+    margin: 0 auto;
   }
   /* i couldn't get the image and text to be side by side and because everything else is done and its already past due i'm going to turn it in. if you could leave a note on how to do it for later that would be awesome! */
 }
